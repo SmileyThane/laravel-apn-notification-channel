@@ -55,6 +55,7 @@ class ApnServiceProvider extends ServiceProvider
             return Certificate::create([
                 'certificate_path' => $config['certificate_path'],
                 'certificate_secret' => $config['certificate_secret'],
+                'app_bundle_id' => $config['app_bundle_id'],
             ]);
         }
 
