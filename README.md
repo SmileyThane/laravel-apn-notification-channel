@@ -91,6 +91,7 @@ If you are using Certificate-based authentication:
     'apn' => [
         'driver' => 'certificate',
         'is_production' => env('APP_ENV') === 'production',
+        'app_bundle_id' => env('APN_APP_BUNDLE_ID'), // The Bundle ID of your application. For example, "com.company.application"
         'certificate_path' => env('APN_CERTIFICATE_PATH', storage_path('apns-certificate.pem')),
         'certificate_secret' => env('APN_CERTIFICATE_SECRET'),
     ],
