@@ -1,5 +1,5 @@
 {
-    "name": "semyonchetvertnyh/laravel-apn-notification-channel",
+    "name": "smileythane/laravel-apn-notification-channel",
     "description": "Apple Push Notification Service (APNs) notifications channel for Laravel 6 using the new APNs HTTP/2 protocol with token-based (JWT with p8 private key)",
     "keywords": [
         "apns",
@@ -9,12 +9,11 @@
         "laravel apns",
         "laravel p8"
     ],
-    "homepage": "https://github.com/semyonchetvertnyh/laravel-apn-notification-channel",
+    "homepage": "https://github.com/smileythane/laravel-apn-notification-channel",
     "license": "MIT",
     "authors": [
         {
-            "name": "Semyon Chetvertnyh",
-            "email": "semyon.chetvertnyh@gmail.com",
+            "name": "SmileyThane",
             "role": "Developer"
         }
     ],
@@ -31,18 +30,18 @@
     },
     "autoload": {
         "psr-4": {
-            "SemyonChetvertnyh\\ApnNotificationChannel\\": "src"
+            "SmileyThane\\ApnNotificationChannel\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "SemyonChetvertnyh\\ApnNotificationChannel\\Test\\": "tests"
+            "SmileyThane\\ApnNotificationChannel\\Test\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "SemyonChetvertnyh\\ApnNotificationChannel\\ApnServiceProvider"
+                "SmileyThane\\ApnNotificationChannel\\ApnServiceProvider"
             ]
         }
     },

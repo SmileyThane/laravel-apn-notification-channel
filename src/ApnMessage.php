@@ -1,6 +1,6 @@
 <?php
 
-namespace SemyonChetvertnyh\ApnNotificationChannel;
+namespace SmileyThane\ApnNotificationChannel;
 
 class ApnMessage
 {

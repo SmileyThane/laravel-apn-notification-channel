@@ -1,12 +1,12 @@
-# APNs (.p8) notifications channel for Laravel 6
+# APNs notifications channel for Laravel
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/semyonchetvertnyh/laravel-apn-notification-channel.svg?style=flat-square)](https://packagist.org/packages/semyonchetvertnyh/laravel-apn-notification-channel)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/SmileyThane/laravel-apn-notification-channel.svg?style=flat-square)](https://packagist.org/packages/SmileyThane/laravel-apn-notification-channel)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/semyonchetvertnyh/laravel-apn-notification-channel/master.svg?style=flat-square)](https://travis-ci.org/semyonchetvertnyh/laravel-apn-notification-channel)
+[![Build Status](https://img.shields.io/travis/SmileyThane/laravel-apn-notification-channel/master.svg?style=flat-square)](https://travis-ci.org/SmileyThane/laravel-apn-notification-channel)
 [![StyleCI](https://styleci.io/repos/161703866/shield)](https://styleci.io/repos/161703866)
-[![Quality Score](https://img.shields.io/scrutinizer/g/semyonchetvertnyh/laravel-apn-notification-channel.svg?style=flat-square)](https://scrutinizer-ci.com/g/semyonchetvertnyh/laravel-apn-notification-channel)
-[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/semyonchetvertnyh/laravel-apn-notification-channel/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/semyonchetvertnyh/laravel-apn-notification-channel/?branch=master)
-[![Total Downloads](https://img.shields.io/packagist/dt/semyonchetvertnyh/laravel-apn-notification-channel.svg?style=flat-square)](https://packagist.org/packages/semyonchetvertnyh/laravel-apn-notification-channel)
+[![Quality Score](https://img.shields.io/scrutinizer/g/SmileyThane/laravel-apn-notification-channel.svg?style=flat-square)](https://scrutinizer-ci.com/g/SmileyThane/laravel-apn-notification-channel)
+[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/SmileyThane/laravel-apn-notification-channel/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/SmileyThane/laravel-apn-notification-channel/?branch=master)
+[![Total Downloads](https://img.shields.io/packagist/dt/SmileyThane/laravel-apn-notification-channel.svg?style=flat-square)](https://packagist.org/packages/SmileyThane/laravel-apn-notification-channel)
 
 This package makes it easy to send notifications with Laravel 6 to iOS using the new APNs HTTP/2 protocol with token-based (JWT with p8 private key).
 
@@ -46,7 +46,7 @@ This package makes it easy to send notifications with Laravel 6 to iOS using the
 Install this package with Composer:
 
 ```bash
-composer require semyonchetvertnyh/laravel-apn-notification-channel
+composer require SmileyThane/laravel-apn-notification-channel
 ```
 
 If you're installing the package in Laravel 5.4 or lower, you must import the service provider:
@@ -55,7 +55,7 @@ If you're installing the package in Laravel 5.4 or lower, you must import the se
 // config/app.php
 'providers' => [
     // ...
-    SemyonChetvertnyh\ApnNotificationChannel\ApnServiceProvider::class,
+    SmileyThane\ApnNotificationChannel\ApnServiceProvider::class,
 ],
 ```
 
@@ -105,7 +105,7 @@ Now you can use the channel in your `via()` method inside the notification:
 
 ```php
 use Illuminate\Notifications\Notification;
-use SemyonChetvertnyh\ApnNotificationChannel\ApnMessage;
+use SmileyThane\ApnNotificationChannel\ApnMessage;
 
 class AccountApproved extends Notification
 {
@@ -158,33 +158,8 @@ public function routeNotificationForApn()
  - `badge($int)`
  - `sound($str)`
  - `category($str)`
- - `custom($key, $value)`
- - `setCustom($array)`
- - `titleLocKey($str)`
- - `titleLocArgs($array)`
- - `actionLocKey($str)`
- - `setLocKey($str)`
- - `setLocArgs($array)`
  - `launchImage($str)`
- - `contentAvailability($bool)`
- - `mutableContent($bool)`
  - `threadId($str)`
- 
-## TODO
-
-- [X] Fix Travis CI
-- [ ] Fix Scrutinizer CI Code Coverage
-- [ ] Add tests
-
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
-## Testing
-
-``` bash
-$ composer test
-```
 
 ## Security
 
@@ -196,7 +171,6 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Credits
 
-- [Semyon Chetvertnyh](https://github.com/semyonchetvertnyh)
 - [Arthur Edamov](https://github.com/edamov)
 - [All Contributors](../../contributors)
 

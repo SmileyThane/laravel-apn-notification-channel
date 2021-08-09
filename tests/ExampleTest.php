@@ -1,6 +1,6 @@
 <?php
 
-namespace SemyonChetvertnyh\ApnNotificationChannel\Test;
+namespace SmileyThane\ApnNotificationChannel\Test;
 
 use PHPUnit\Framework\TestCase;
 

@@ -1,22 +1,22 @@
 <?php
 
-namespace SemyonChetvertnyh\ApnNotificationChannel\Exceptions;
+namespace SmileyThane\ApnNotificationChannel\Exceptions;
 
 use Exception;
 use Pushok\ApnsResponseInterface;
-use SemyonChetvertnyh\ApnNotificationChannel\ApnsResponseCollection;
+use SmileyThane\ApnNotificationChannel\ApnsResponseCollection;
 
 class CouldNotSendNotification extends Exception
 {
     /**
-     * @var \SemyonChetvertnyh\ApnNotificationChannel\ApnsResponseCollection|\Pushok\ApnsResponseInterface[]
+     * @var \SmileyThane\ApnNotificationChannel\ApnsResponseCollection|\Pushok\ApnsResponseInterface[]
      */
     protected $responses;
 
     /**
      * Create an instance of exception attaching responses.
      *
-     * @param  \SemyonChetvertnyh\ApnNotificationChannel\ApnsResponseCollection|\Pushok\ApnsResponseInterface[]  $responses
+     * @param  \SmileyThane\ApnNotificationChannel\ApnsResponseCollection|\Pushok\ApnsResponseInterface[]  $responses
      * @return $this
      */
     public static function withUnsuccessful(ApnsResponseCollection $responses)
@@ -34,7 +34,7 @@ class CouldNotSendNotification extends Exception
     /**
      * Attach the responses.
      *
-     * @param  \SemyonChetvertnyh\ApnNotificationChannel\ApnsResponseCollection|\Pushok\ApnsResponseInterface[]  $responses
+     * @param  \SmileyThane\ApnNotificationChannel\ApnsResponseCollection|\Pushok\ApnsResponseInterface[]  $responses
      * @return $this
      */
     protected function setResponses(ApnsResponseCollection $responses)
@@ -47,7 +47,7 @@ class CouldNotSendNotification extends Exception
     /**
      * Get the responses collection.
      *
-     * @return \SemyonChetvertnyh\ApnNotificationChannel\ApnsResponseCollection|\Pushok\ApnsResponseInterface[]
+     * @return \SmileyThane\ApnNotificationChannel\ApnsResponseCollection|\Pushok\ApnsResponseInterface[]
      */
     public function getResponses()
     {
